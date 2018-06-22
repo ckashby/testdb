@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Testdb</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+   <!-- <script src= https //maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js></script> -->
+
   </head>
 
   <body>
-    <%= yield %>
+    <p id="notice"><%= notice %></p>
+
+    <%= render 'layouts/header' %>
+
+    <div  class="container">
+      <%= yield %>
+    </div>
+
+    <%= render 'layouts/footer' %>
+
   </body>
 </html>
